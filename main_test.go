@@ -33,7 +33,7 @@ func TestGetSubscriptionID(t *testing.T) {
 		response: mockResponse,
 	}
 
-	// Create a new AzureSubscription object
+	// Create a new azureSubscription object
 	subscription := &azureSubscription{
 		client:   client,
 		executor: executor,
