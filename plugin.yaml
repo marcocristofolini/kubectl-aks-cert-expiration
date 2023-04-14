@@ -1,0 +1,45 @@
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  name: aks-cert-expiration
+spec:
+  version: "v1.0.0"
+  homepage: https://github.com/marcocristofolini/kubectl-aks-cert-expiration
+  shortDescription: Check AKS certificate expiration across all Azure subscriptions
+  description: |
+    This plugin checks the expiration of Kubernetes API server TLS certificates
+    for AKS clusters across all subscriptions in an Azure account. It authenticates
+    with Azure, iterates through each subscription, and checks the certificate
+    expiration for all AKS clusters by connecting to the Kubernetes API server
+    directly and inspecting the TLS certificate.
+  platforms:
+  - selector:
+      matchLabels:
+        os: linux
+        arch: amd64
+    uri: https://your-binary-url/kubectl-aks_cert_expiration-linux-amd64.tar.gz
+    sha256: 0e04a6633efcdd68105ffcb6e978ad14cc7739151bfe1c0349b66623ca467b8c
+    files:
+    - from: "kubectl-aks_cert_expiration"
+      to: "."
+    bin: "kubectl-aks_cert_expiration"
+  - selector:
+      matchLabels:
+        os: darwin
+        arch: amd64
+    uri: https://your-binary-url/kubectl-aks_cert_expiration-darwin-amd64.tar.gz
+    sha256: 0e04a6633efcdd68105ffcb6e978ad14cc7739151bfe1c0349b66623ca467b8c
+    files:
+    - from: "kubectl-aks_cert_expiration"
+      to: "."
+    bin: "kubectl-aks_cert_expiration"
+  - selector:
+      matchLabels:
+        os: darwin
+        arch: arm64
+    uri: https://your-binary-url/kubectl-aks_cert_expiration-darwin-arm64.tar.gz
+    sha256: 0e04a6633efcdd68105ffcb6e978ad14cc7739151bfe1c0349b66623ca467b8c
+    files:
+    - from: "kubectl-aks_cert_expiration"
+      to: "."
+    bin: "kubectl-aks_cert_expiration"
