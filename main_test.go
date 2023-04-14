@@ -34,7 +34,7 @@ func TestGetSubscriptionID(t *testing.T) {
 	}
 
 	// Create a new azureSubscription object
-	subscription := &azureSubscription{
+	subscription := &AzureSubscription{
 		client:   client,
 		executor: executor,
 	}
