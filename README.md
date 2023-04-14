@@ -1,3 +1,5 @@
+[![CI](https://github.com/marcocristofolini/kubectl-aks-cert-expiration/actions/workflows/go.yml/badge.svg?branch=main)](https://github.com/marcocristofolini/kubectl-aks-cert-expiration/actions/workflows/go.yml)
+
 # kubectl-aks-cert-expiration
 
 A kubectl krew plugin that checks the expiration of Kubernetes API server TLS certificates for AKS clusters across all subscriptions in an Azure account.
