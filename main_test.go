@@ -1,6 +1,9 @@
 package main
 
 import (
+	"bytes"
+	"io/ioutil"
+	"net/http"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -31,9 +34,9 @@ func TestGetSubscriptionID(t *testing.T) {
 	}
 
 	// Create a new AzureSubscription object
-	subscription := &AzureSubscription{
-		Client:   client,
-		Executor: executor,
+	subscription := &azureSubscription{
+		client:   client,
+		executor: executor,
 	}
 
 	// Call the GetSubscriptionID method
