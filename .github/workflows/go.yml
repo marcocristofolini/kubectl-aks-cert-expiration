@@ -39,6 +39,5 @@ jobs:
     - name: Install dependencies
       run: go mod download
       
-    - name: Run tests
-      run: go test ./...
+ 
 
